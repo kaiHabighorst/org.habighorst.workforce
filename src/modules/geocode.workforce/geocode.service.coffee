@@ -1,7 +1,9 @@
 'use strict'
 
 Bacon = require 'baconjs'
-GeoCode = require 'google-geocoding'
+GeoCodeModule = require 'node-geocoder'
+
+GeoCode = GeoCodeModule.getGeoCoder('google','https')
 
 ### @ngInject ###
 module.exports = ()  ->
