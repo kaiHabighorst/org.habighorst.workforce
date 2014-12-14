@@ -3,6 +3,7 @@ global.BUILD_FOLDER = 'build';
 global.RELEASE_FOLDER = 'release';
 global.TMP_FOLDER = 'tmp';
 global.TEST_FOLDER = 'test';
+global.GULP_FOLDER = 'gulp';
 
 global.config = {
   paths: {
@@ -19,8 +20,8 @@ global.config = {
       templatesCompiled: TMP_FOLDER,
       livereload: [BUILD_FOLDER + '/**/*', '!' + BUILD_FOLDER + '/assets/**/*'],
       testsuite: './' + SRC_FOLDER + '/modules/testsuite.coffee',
-      modules: './' + SRC_FOLDER + '/modules/index.coffee'
-    },
+      modules: './' + SRC_FOLDER + '/modules/index.coffee',
+      gitArray: [SRC_FOLDER + '/*',TEST_FOLDER + '/*',RELEASE_FOLDER + '/*',BUILD_FOLDER + '/*', GULP_FOLDER + '/*', './package.json']    },
     dest: {
       build: {
         styles: BUILD_FOLDER,
