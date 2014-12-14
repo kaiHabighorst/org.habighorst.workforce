@@ -3,7 +3,7 @@
 Bacon = require 'baconjs'
 GeoCodeModule = require 'node-geocoder'
 
-GeoCode = GeoCodeModule.getGeoCoder('google','https')
+GeoCode = GeoCodeModule.getGeocoder('google','https')
 
 ### @ngInject ###
 module.exports = ()  ->
