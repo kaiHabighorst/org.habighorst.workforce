@@ -3,12 +3,17 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "repository" : { 
+      "type" : "git",
+      "url" : "https://kaihabighorst@bitbucket.org/kaihabighorst/wf.git"
+  },
   "scripts": {
     "postinstall": "npm install browserify@4.2.3 gulp-header",
     "start": "gulp"
   },
   "devDependencies": {
     "browserify": "*",
+    "gulp-git": "^0.4.0",
     "browserify-shim": "^3.6.0",
     "coffeeify": "^0.7.0",
     "connect": "^2.24.2",
@@ -47,7 +52,7 @@
   "browserify-shim": {},
   "dependencies": {
     "baconjs": "^0.7.37",
-    "google-geocoding": "^0.1.7",
+    "node-geocoder": "^2.12.0",
     "xlsx": "^0.7.12"
   }
 }
