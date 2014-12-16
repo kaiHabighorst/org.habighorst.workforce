@@ -15,6 +15,28 @@ module.exports = (eventBusService)  ->
     delete: (params...) ->
       publishEventWrapper(DeleteAppointmentEvent, params...)
 
+  wrapMethodAsEvent =  (name , method) ->
+    wrappedMethod = (params...) ->
+      event =
+        eventCode: method
+        occuredAt: new Date()
+        eventName: name
+        input: params...
+        execute: () ->
+          return eventCode(input)
+
+    return name, wrappedMethod
+
+  eventRepository.addEventCategory = (name, eventCategory) ->
+    new Error('Category does alreday exist') if eventRepository[eventCategory]
+
+    # wrapping all methods in an Event class
+    wrap = wrapMethodAsEvent(n,func)  for n, func of eventCategory
+      when typeof v is 'function')
+    console.log('methods', wrap)
+
+    eventRepository[name] = eventCategory
+
   return eventRepository
 
 # EVENT CLASSES

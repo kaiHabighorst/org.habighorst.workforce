@@ -16485,6 +16485,11 @@ module.exports = function(eventBusService) {
       return publishEventWrapper.apply(null, [DeleteAppointmentEvent].concat(__slice.call(params)));
     }
   };
+  eventRepository.addEventCategory = function(eventCategory) {
+    if (eventRepository[eventCategory]) {
+      return new Error('Category does alreday exist');
+    }
+  };
   return eventRepository;
 };
 

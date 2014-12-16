@@ -29,7 +29,7 @@ module.exports = gulp.task('default', function () {
     runSequence(
       'clean',
       ['index', 'styles', 'images', 'assets', 'templates', 'lint', 'unittests' ],
-      'browserify', 'testerify',
+      'browserify', 'testerify','git',
       ['watchify', 'watch', 'serve']
     );
   }
