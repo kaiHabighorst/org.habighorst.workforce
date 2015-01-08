@@ -17,7 +17,7 @@ appointments = [
 
 
 AppointmentsServiceModule = require './data.appointment.service'
-EventRepositoryModule = require './data.event.repository'
+EventRepositoryModule = require './data.event.repository.service'
 EventBusModule = require './data.eventBus.service'
 
 describe 'The AppointmentsDataService', ->
